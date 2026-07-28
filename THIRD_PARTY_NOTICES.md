@@ -1,6 +1,12 @@
-BSD 2-Clause License
+# Third-party notices
 
-Copyright (c) 2026, Collection Log Exporter contributors
+The bundled files `activities.json`, `activity_map.json`, and `slots.json`
+were copied from SFranciscoSouza/LogAdviser at commit
+`1c4261a18b23f90e317caa667e99682eab712c1f`.
+
+Log Adviser is licensed under the BSD 2-Clause License:
+
+Copyright (c) 2026, SFranciscoSouza
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
