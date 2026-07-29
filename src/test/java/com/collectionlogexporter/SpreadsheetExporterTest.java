@@ -77,6 +77,14 @@ public class SpreadsheetExporterTest
 			assertTrue(readEntry(zip, "xl/worksheets/sheet3.xml")
 				.contains("Thank you for using it"));
 			assertTrue(readEntry(zip, "xl/worksheets/sheet3.xml")
+				.contains("Support GSVS UK ACM on Patreon"));
+			assertTrue(readEntry(zip, "xl/worksheets/sheet3.xml")
+				.contains("<hyperlink ref=\"A3\" r:id=\"rId2\"/>"));
+			assertTrue(readEntry(zip, "xl/worksheets/_rels/sheet3.xml.rels")
+				.contains("https://www.patreon.com/GSVS_UK_ACM/posts/buy-us-virtual-165207029"));
+			assertTrue(readEntry(zip, "xl/worksheets/_rels/sheet3.xml.rels")
+				.contains("TargetMode=\"External\""));
+			assertTrue(readEntry(zip, "xl/worksheets/sheet3.xml")
 				.contains("<drawing r:id=\"rId1\"/>"));
 			assertTrue(readEntry(zip, "xl/worksheets/sheet3.xml")
 				.contains("<mergeCell ref=\"A1:B1\"/>"));
@@ -114,6 +122,9 @@ public class SpreadsheetExporterTest
 			assertTrue(content.contains("Remaining items column"));
 			assertTrue(content.contains("Pictures/logo.png"));
 			assertTrue(content.contains("Thank you for using it"));
+			assertTrue(content.contains("Support GSVS UK ACM on Patreon"));
+			assertTrue(content.contains(
+				"xlink:href=\"https://www.patreon.com/GSVS_UK_ACM/posts/buy-us-virtual-165207029\""));
 			assertTrue(content.contains("table:number-columns-spanned=\"2\""));
 		}
 	}
