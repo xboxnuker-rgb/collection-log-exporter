@@ -158,7 +158,7 @@ final class ExporterPanel extends PluginPanel
 		runOnEdt(() ->
 		{
 			exportUnlocked = false;
-			status.setText("Syncing Collection Log...");
+			status.setText("Click Search in the Collection Log...");
 			status.setForeground(new Color(255, 193, 7));
 			syncButton.setEnabled(false);
 			exportButton.setEnabled(false);

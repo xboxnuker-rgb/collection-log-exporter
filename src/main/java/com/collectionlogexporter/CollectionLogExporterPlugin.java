@@ -23,7 +23,6 @@ import javax.inject.Inject;
 import net.runelite.api.Client;
 import net.runelite.api.EnumComposition;
 import net.runelite.api.GameState;
-import net.runelite.api.MenuAction;
 import net.runelite.api.ScriptEvent;
 import net.runelite.api.ScriptID;
 import net.runelite.api.StructComposition;
@@ -390,14 +389,9 @@ public class CollectionLogExporterPlugin extends Plugin
 		lastTransmitTick = -1;
 		panel.setSyncing();
 
-		client.menuAction(
-			-1,
-			InterfaceID.Collection.SEARCH_TOGGLE,
-			MenuAction.CC_OP,
-			1,
-			-1,
-			"Search",
-			null);
+		// The native Collection Log Search button must be clicked by the user.
+		// That click sends the complete item snapshot to the client; the plugin
+		// only listens for the resulting script transmission.
 		client.runScript(COLLECTION_INIT);
 	}
 
