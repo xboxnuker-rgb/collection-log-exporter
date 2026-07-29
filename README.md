@@ -5,8 +5,9 @@ Collection Log page and missing slot to a sortable spreadsheet.
 
 ## Features
 
-- Reads the account's complete item snapshot from the Collection Log's existing
-  Search operation. The normal page is restored immediately.
+- Reads the account's complete item snapshot from the Collection Log's existing,
+  user-initiated Search operation. The normal page is restored immediately; the
+  plugin never clicks Search or injects game input.
 - Uses RuneScape cache enums and structs for the current category, page and item
   definitions rather than maintaining a second static Collection Log.
 - Shows page progress such as `3/5` on every missing-item row.
@@ -37,8 +38,9 @@ Collection Log page and missing slot to a sortable spreadsheet.
 ## Using the plugin
 
 1. Log in and open your own Collection Log.
-2. Wait for the side panel to show `Snapshot ready`. Sync is automatic, or use
-   **Sync open Collection Log**.
+2. If the side panel is not already listening, press **Sync open Collection Log**,
+   then click the Collection Log's native **Search** button. The panel will show
+   `Snapshot ready` after the transmission settles.
 3. Wait briefly for the public Jagex hiscore KC lookup. Supported pages are
    checked automatically.
 4. **Choose export...** is already available. Optionally open the remaining
@@ -79,7 +81,7 @@ progress still reflects every slot displayed on that page.
 
 ### Current KC
 
-The Collection Log Search response exposes the complete owned-item snapshot but
+The user clicking the Collection Log Search button exposes the complete owned-item snapshot but
 not every page's KC/attempt counter. RuneProfile and WikiSync use that same
 whole-log response; the exporter can passively merge those responses too.
 After Sync, one official Jagex hiscore lookup fills supported boss, raid, clue
