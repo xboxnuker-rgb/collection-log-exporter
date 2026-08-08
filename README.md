@@ -38,9 +38,9 @@ Collection Log page and missing slot to a sortable spreadsheet.
 ## Using the plugin
 
 1. Log in and open your own Collection Log.
-2. If the side panel is not already listening, press **Sync open Collection Log**,
-   then click the Collection Log's native **Search** button. The panel will show
-   `Snapshot ready` after the transmission settles.
+2. If the side panel is not already listening, press **Sync open Collection Log**.
+	Click the Collection Log's native **Search** button once. The panel will show
+	`Snapshot ready` after the transmission settles.
 3. Wait briefly for the public Jagex hiscore KC lookup. Supported pages are
    checked automatically.
 4. **Choose export...** is already available. Optionally open the remaining
