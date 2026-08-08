@@ -61,7 +61,6 @@ public class CollectionLogExporterPlugin extends Plugin
 	private static final Logger log = LoggerFactory.getLogger(CollectionLogExporterPlugin.class);
 
 	private static final int COLLECTION_DELAYED_TRANSMIT = 4100;
-	private static final int COLLECTION_INIT = 2240;
 	private static final int COLLECTION_LOG_SETUP = 7797;
 	private static final int COLLECTION_TAB_ENUM = 2102;
 	private static final int TAB_PAGE_ENUM_PARAM = 683;
@@ -300,7 +299,8 @@ public class CollectionLogExporterPlugin extends Plugin
 			if (panel != null)
 			{
 				panel.setPageChecklist(Collections.emptyList(), Collections.emptySet());
-				panel.setNeedsLog("Log in and open your Collection Log to sync.");
+				panel.setNeedsLog(
+					"Log in, open your own Collection Log, then click its native Search button once.");
 			}
 		}
 	}
@@ -325,7 +325,8 @@ public class CollectionLogExporterPlugin extends Plugin
 			}
 			if (client.getWidget(InterfaceID.Collection.FRAME) == null)
 			{
-				panel.setNeedsLog("Open your Collection Log in-game, then press Sync.");
+				panel.setNeedsLog(
+					"Open your own Collection Log, press Sync, then click its native Search button once.");
 				return true;
 			}
 			beginSync();
@@ -392,7 +393,6 @@ public class CollectionLogExporterPlugin extends Plugin
 		// The native Collection Log Search button must be clicked by the user.
 		// That click sends the complete item snapshot to the client; the plugin
 		// only listens for the resulting script transmission.
-		client.runScript(COLLECTION_INIT);
 	}
 
 	private boolean loadPageDefinitions()
@@ -613,7 +613,8 @@ public class CollectionLogExporterPlugin extends Plugin
 		{
 			if (!snapshotReady || definitions.isEmpty())
 			{
-				panel.setNeedsLog("Open your Collection Log and sync before exporting.");
+				panel.setNeedsLog(
+					"Open your own Collection Log and click its native Search button once before exporting.");
 				return true;
 			}
 			boolean ironman = resolveIronman(options.getEstimateMode());

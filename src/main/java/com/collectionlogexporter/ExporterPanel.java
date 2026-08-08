@@ -38,7 +38,8 @@ final class ExporterPanel extends PluginPanel
 	private final JLabel checklistMessage = new JLabel(
 		"<html><b>Optional: open uncovered pages for KC.</b><br>"
 		+ "The complete item list is available after Sync.</html>");
-	private final JLabel status = new JLabel("<html>Open your Collection Log to sync.</html>");
+	private final JLabel status = new JLabel(
+		"<html>Open your own Collection Log, then click its native <b>Search</b> button once.</html>");
 	private final JLabel count = new JLabel("No snapshot this session");
 	private final JLabel checklistProgress = new JLabel(
 		"<html>0 / 0 pages<br>with KC coverage</html>");
@@ -158,7 +159,8 @@ final class ExporterPanel extends PluginPanel
 		runOnEdt(() ->
 		{
 			exportUnlocked = false;
-			status.setText("Click Search in the Collection Log...");
+			status.setText(
+				"<html>Click the Collection Log's native <b>Search</b> button once.</html>");
 			status.setForeground(new Color(255, 193, 7));
 			syncButton.setEnabled(false);
 			exportButton.setEnabled(false);
