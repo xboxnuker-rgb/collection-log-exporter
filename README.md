@@ -9,6 +9,8 @@
 
 Turn your missing Collection Log slots into a sortable spreadsheet. Compare unfinished pages, review missing items and plan your next goal in Excel, LibreOffice or Google Sheets.
 
+![Collection Log Exporter panel with a complete snapshot ready to export](docs/images/exporter-panel.png)
+
 ## Export the view you need
 
 | Format | Use it for |
@@ -16,6 +18,8 @@ Turn your missing Collection Log slots into a sortable spreadsheet. Compare unfi
 | **XLSX** | Excel workbooks with sortable tables and filter buttons. |
 | **ODS** | Workbooks for LibreOffice and OpenOffice. |
 | **CSV** | A single portable table, including import into Google Sheets. |
+
+![Export format, detail, sorting and estimate profile options](docs/images/export-options.png)
 
 Workbooks include **Page summary**, **Remaining items** and **About** sheets. Choose the detail level and sort order before saving. CSV supports one table: summary-only exports page summaries; the other detail choices export missing-item rows with page fields repeated.
 
@@ -25,6 +29,24 @@ Workbooks include **Page summary**, **Remaining items** and **About** sheets. Ch
 - Compare loose effective-time estimates using **Estimate rates**: automatic account detection, main or iron rates.
 - Review each missing slot with its suggested activity, bundled drop rate and supporting calculation fields.
 - Unknown estimates say **Estimate unavailable**. Items at or beyond nominal rate show **Anytime** and how far over target their KC is.
+
+### Page summary
+
+Sort the summary by closest estimated completion to bring practical short-term goals to the top.
+
+[![Page summary sorted by closest estimated completion](docs/images/page-summary-closest.png)](docs/images/page-summary-closest.png)
+
+<details>
+  <summary>See the page summary sorted by remaining slots</summary>
+
+  <a href="docs/images/page-summary-remaining.png"><img src="docs/images/page-summary-remaining.png" alt="Page summary sorted by remaining Collection Log slots"></a>
+</details>
+
+### Remaining items
+
+The detailed view puts each missing item beside its page progress, estimate, current counters and suggested activity.
+
+[![Remaining Collection Log items with estimates and suggested activities](docs/images/remaining-items.png)](docs/images/remaining-items.png)
 
 These are planning estimates, not predictions of when a random drop will arrive. Being over rate does not make the next kill more likely to drop the item.
 
